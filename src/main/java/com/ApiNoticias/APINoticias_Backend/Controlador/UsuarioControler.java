@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://api-noticias1-1914.vercel.app")
 public class UsuarioControler {
 private final serviceUsuario serUsuario;
 public UsuarioControler(serviceUsuario serUsuario){

@@ -12,7 +12,7 @@ import java.util.Map;
  * Controlador para gestionar las operaciones relacionadas con LineaTiempoNoticia.
  */
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://api-noticias1-1914.vercel.app")
 @RequestMapping("/linea-tiempo-noticia")
 public class LineaTiempoNoticiaControlador {
 
