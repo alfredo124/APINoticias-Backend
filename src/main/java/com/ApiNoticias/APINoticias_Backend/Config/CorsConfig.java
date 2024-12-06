@@ -25,7 +25,7 @@ public class CorsConfig {
         corsConfiguration.addAllowedHeader("*"); // Permitir todos los encabezados
 
         // Si necesitas permitir cookies o credenciales
-        corsConfiguration.setAllowCredentials(true);
+        //corsConfiguration.setAllowCredentials(true);
 
         // Configura CORS para todas las rutas
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
