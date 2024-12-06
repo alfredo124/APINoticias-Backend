@@ -13,26 +13,25 @@ public class CorsConfig {
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
 
-        // Permitir solicitudes de este origen (Vercel)
-        corsConfiguration.addAllowedOrigin("https://api-noticias1-1914.vercel.app"); // Cambia esto por tu dominio de Vercel
+        // Permitir solicitudes desde tu dominio en Vercel
+        corsConfiguration.addAllowedOrigin("https://api-noticias1-1914.vercel.app");
 
-        // Permitir ciertos métodos
+        // Permitir métodos
         corsConfiguration.addAllowedMethod("GET");
         corsConfiguration.addAllowedMethod("POST");
         corsConfiguration.addAllowedMethod("PUT");
         corsConfiguration.addAllowedMethod("DELETE");
 
-        // Permitir encabezados específicos
+        // Permitir cabeceras
         corsConfiguration.addAllowedHeader("*");
 
-        // Si es necesario permitir cookies o credenciales
+        // Si se necesitan credenciales (cookies, cabeceras de autenticación)
         corsConfiguration.setAllowCredentials(true);
 
-        // Aplicar la configuración a todas las rutas
+        // Configura el manejo de solicitudes OPTIONS
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", corsConfiguration);
 
         return new CorsFilter(source);
     }
 }
-
