@@ -1,5 +1,4 @@
 package com.ApiNoticias.APINoticias_Backend.Config;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.filter.CorsFilter;
@@ -14,21 +13,21 @@ public class CorsConfig {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
 
         // Permitir solicitudes desde tu dominio en Vercel
-        corsConfiguration.addAllowedOrigin("https://api-noticias1-1914.vercel.app");
+        corsConfiguration.addAllowedOrigin("https://api-noticias1-1914.vercel.app"); // Cambia por tu dominio de Vercel
 
-        // Permitir métodos
+        // Permitir métodos específicos
         corsConfiguration.addAllowedMethod("GET");
         corsConfiguration.addAllowedMethod("POST");
         corsConfiguration.addAllowedMethod("PUT");
         corsConfiguration.addAllowedMethod("DELETE");
 
-        // Permitir cabeceras
-        corsConfiguration.addAllowedHeader("*");
+        // Permitir encabezados específicos
+        corsConfiguration.addAllowedHeader("*"); // Permitir todos los encabezados
 
-        // Si se necesitan credenciales (cookies, cabeceras de autenticación)
+        // Si necesitas permitir cookies o credenciales
         corsConfiguration.setAllowCredentials(true);
 
-        // Configura el manejo de solicitudes OPTIONS
+        // Configura CORS para todas las rutas
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", corsConfiguration);
 
