@@ -13,7 +13,7 @@ public class CorsConfig {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
 
         // Permitir solicitudes desde tu dominio en Vercel
-        corsConfiguration.addAllowedOrigin("https://api-noticias1-1914.vercel.app"); // Cambia por tu dominio de Vercel
+        corsConfiguration.addAllowedOrigin("https://api-noticias1-1914-git-main-alfredo124s-projects.vercel.app"); // Cambia por tu dominio de Vercel
 
         // Permitir métodos específicos
         corsConfiguration.addAllowedMethod("GET");

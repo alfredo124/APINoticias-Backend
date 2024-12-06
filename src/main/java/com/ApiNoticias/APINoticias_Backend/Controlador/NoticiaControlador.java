@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "https://api-noticias1-1914.vercel.app")
+@CrossOrigin(origins = "https://api-noticias1-1914-git-main-alfredo124s-projects.vercel.app")
 public class NoticiaControlador {
 
     private final ServiceNoticia servicioNoticia;
