@@ -9,7 +9,7 @@ datasource:
         jdbc-url: jdbc:mysql://bfqbqkxgaslrjtwpr6wn-mysql.services.clever-cloud.com/bfqbqkxgaslrjtwpr6wn
         username: um7owh6xrefyzh8q
         password: 949KhdTBJHfFtEVrUND4
-        maximum-pool-size: 20
+        maximum-pool-size: 100
         pool-name: "crud-api"
         auto-commit: true
 server:

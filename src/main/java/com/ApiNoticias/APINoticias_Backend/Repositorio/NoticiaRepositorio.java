@@ -63,7 +63,7 @@ public class NoticiaRepositorio {
      */
     public long createNoticia(Noticia nuevaNoticia) {
         // Verificar si ya existe una noticia con el mismo título
-        String sqlVerificarTitulo = "SELECT COUNT(*) FROM noticia WHERE titular = :titular";
+        String sqlVerificarTitulo = "SELECT COUNT(*) FROM noticia WHERE urlnoticia = :urlnoticia";
         MapSqlParameterSource parametrosVerificacion = new MapSqlParameterSource();
         parametrosVerificacion.addValue("titular", nuevaNoticia.getTitular());
 
