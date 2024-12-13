@@ -12,6 +12,6 @@ public class WebConfig implements WebMvcConfigurer{
                 .allowedHeaders("origin","Content-Type","Accept","Authorization")
                 .maxAge(3600)
                 .allowedHeaders("*")
-                .allowCredentials(true);
+                .allowCredentials(false);
     }
 }
