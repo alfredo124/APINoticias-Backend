@@ -20,12 +20,12 @@ public class CorsConfig {
         corsConfiguration.addAllowedMethod("POST");
         corsConfiguration.addAllowedMethod("PUT");
         corsConfiguration.addAllowedMethod("DELETE");
-
+        corsConfiguration.addAllowedMethod("OPTIONS");
         // Permitir encabezados específicos
         corsConfiguration.addAllowedHeader("*"); // Permitir todos los encabezados
 
         // Si necesitas permitir cookies o credenciales
-        corsConfiguration.setAllowCredentials(true);
+        corsConfiguration.setAllowCredentials(false);
 
         // Configura CORS para todas las rutas
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
